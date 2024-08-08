@@ -1,0 +1,53 @@
+.text1, .text3 {
+    width: 200px;
+    height: 100px;
+    background-color: chocolate;
+}
+
+#text2 {
+    width: 350px;
+    height: 125px;
+    background-color: wheat;
+}
+
+div.alltext {
+    border: 2px solid black;
+    max-width: 500px;
+}
+
+div.alltext::after {
+    content: "After alltext div";
+}
+
+.alltext  p {
+    font-size: 25px;
+}
+
+.alltext + div {
+    background-color: darkcyan;
+}
+
+/* 2задание */
+
+input#name:focus {
+    width: 250px;
+    height: 60px;
+    background-color: aquamarine;
+    font-size: 50px;
+}
+
+
+.input-form input {
+    margin: 15px;
+}
+
+.input-form, .label-form {
+    display: inline-block;
+    border: 1px solid green;
+}
+
+
+/* НЕ РАБОТАЕТ, НЕ МОГУ ПОНЯТЬ ПОЧЕМУ */
+.label-form label {
+    margin: 15px; 
+}
