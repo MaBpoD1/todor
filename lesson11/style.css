@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'BodoniModaSC';
+    src: url(/HTMLCSS/todor/lesson11/BodoniModaSC-VariableFont_opsz\,wght.ttf) format('truetype');
+}
+
+.title1 {
+    text-align: center;
+    font-family: 'BodoniModaSC' ;
+    
+}
+
+h1 {
+    color: rgb(0, 231, 0);
+    text-shadow: 5px 15px 10px #2c0eda, -2px -2px 4px #ff050533;
+    font-style: italic;
+}
+
+.title2 {
+    font-family: "Sankofa Display";
+    font-weight: bold;
+    
+}
+
+* {
+    font-size: 25px;
+    background-color: rgba(138, 170, 207, 0.589);
+}
