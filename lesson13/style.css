@@ -1,0 +1,41 @@
+.conteiner div {
+    margin-left: 15px;
+    width: 450px;
+    display: inline-flex;
+    height: 250px;
+    margin: 15px;
+    font-size: 25px;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, #ff15ff, #00ffaa);
+}
+
+#gradient {
+    border: 2px solid blue;
+    color: white;
+    font-weight: bold;
+    background-image: linear-gradient(to bottom right, #00ff00, #ff00ff);
+}
+
+.block1:hover {
+    box-shadow: 0px 0px 125px 10px white;
+    background-image: radial-gradient(circle, #ff0000, #2500ff);
+}
+
+.block2 {
+    background: conic-gradient(from 45deg, #ff00ff, #00ff00);
+    color: rgb(15, 15, 1);
+    box-shadow: 15px 20px 5px 2px black;
+    /* background: conic-gradient(from 90deg, #00f, #f00 to #00f); */
+}
+
+.block3 {
+    background-image: repeating-linear-gradient(to top left, #00ffff, #ff2 10%);
+    background-repeat: repeat;
+    
+}
+
+.img {
+    box-shadow: 10px 10px 15px 20px #0000ff ;
+}
