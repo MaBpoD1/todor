@@ -1,0 +1,25 @@
+.box {
+    width: 500px;
+    height: 100px;
+    background-color: cornflowerblue;
+    border: 2px solid red;
+    box-shadow: 10px 5px 5px red;
+    transition: background-color 2s ease 0.5s, color 2s ease, margin-left 2s cubic-bezier(0.075, 0.82, 0.165, 1), box-shadow 2s ease 0.1s;
+    color: #ff0000;
+    margin: 2rem;
+    text-shadow: 20px -2px 15px black;
+}
+
+p {
+    font-size: 2em;
+    padding-left: 2rem;
+}
+
+/* думал сделать через active , но тогда надо будет деражть курсор и не очень удобно */
+
+.box:hover {
+    background-color: red;
+    color: #00ff;
+    margin-left: 25rem;
+    box-shadow: 20px 25px 10px blue;
+}
