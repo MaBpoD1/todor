@@ -1,0 +1,28 @@
+.box {
+    width: 300px;
+    height: 150px;
+    display: auto;
+    background-image: background-gradient (red, blue);
+    background-color: rgb(90, 16, 112);
+    border: 1px solid wheat;
+    transition: transform 2s cubic-bezier(0.23, 1, 0.320, 1), translate 0.1s ease;
+    margin-left: 150px;
+}
+
+.first:hover {
+    transform: scale(0.3) translate(50%);
+}
+
+.second:hover {
+    transform: translate(600px) rotate(-45deg);
+    /* rotate: 45deg; */
+    background-color: blue;
+}
+
+.third:hover {
+    transform: translate(100px, 50px);
+}
+
+.fourth:hover {
+    transform: skew(20deg, 30deg);
+}
