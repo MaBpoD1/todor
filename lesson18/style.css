@@ -1,0 +1,79 @@
+.block {
+    display: flex;
+    align-items: center;
+    height: max-content;
+    background-color: black;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.element {
+    width: 300px;
+    height: 550px;
+    margin: 15px;
+    border: 1px solid grey;
+    position: relative;
+}
+
+.element:nth-child(1) {
+    height: 550px;
+    width: 300px;
+    background-image: url(./image1.jpg);
+    background-size: cover;
+    justify-content: center;
+    filter: invert(1) blur(1px) opacity(.85);
+}
+
+.element:nth-child(1):hover {
+    filter: invert(0) blur(0px) opacity(1);
+    transition: filter ease 2s;
+}
+
+.element:nth-child(2) {
+    color: darkkhaki;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 26px;
+    background-image: linear-gradient(to bottom, rgb(28, 23, 102), black);
+    background-size: cover;
+    width: 300px;
+    height: auto;
+    padding: 10px;
+    filter: drop-shadow(-5px -5px 2px white) brightness(.5) saturate(5);
+}
+
+.element:nth-child(2):hover {
+    filter: drop-shadow(15px 15px 4px white) brightness(1) saturate(1);
+    transition: filter ease 2s;
+}
+
+.element:nth-child(3) {
+    background-image: url(./image3.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.1);
+    align-items: center;
+}
+
+.in-three {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* background-image: url(./image2.jpg); */
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    transform: translate(-50%, -50%) scale(0.75);
+    font-size: 30px;
+    color: aliceblue;
+    font-style: normal;
+    backdrop-filter: blur(4px) contrast(150%) brightness(70%);
+}
+
+.in-three:hover {
+    filter:  contrast(150%) brightness(100%);
+    transition: filter cubic-bezier(0.075, 0.82, 0.165, 1) 5s ;
+    background-image: url(./image2.jpg)
+}
