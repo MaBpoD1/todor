@@ -21,6 +21,35 @@
     
 }
 
+/* добавил стики и абсолют, возможно не очень красиво оформил, но понял как работает.  */
+
+.element-sticky {
+    display: flex;
+    position: sticky;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 150px;
+    top: 65px;
+    left: 46%;
+    border: 2px solid black;
+    background-color: #04d1ff31;
+}
+
+
+.element-absolute {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    width: 150px;
+    top: 150px;
+    left: 36%;
+    border: 2px solid black;
+    background-color: #ff7d04;
+}
+
 .box {
     width: 400px;
     height: 300px;
