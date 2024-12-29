@@ -14,18 +14,9 @@ body {
     width: 1000px;
     height: 650px;
     border: 2px solid blue;
-
-
-    /* justify-content: center;
-    align-items: center; */
-
-
-    
-    grid-auto-columns: calc(100%-15px);
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 4fr;
     grid-gap: 15px;
-
     grid-template-areas:
     "sidebar header header"
     "sidebar content content"
@@ -40,8 +31,16 @@ body {
 
 .button {
     font-size: 30px;
+    text-align: center;
+    color: #814cdb;
+
+    background-image: linear-gradient(to bottom, #4e80c2, #dfdc3e);
+    border: 1px solid grey;
     border-radius: 25px;
-    transform: translateX(50%);
+    /* заменил смещение на 50% параметром, который указывает размещение элемента */
+    justify-self: center;
+    align-self: center;
+    
     width: 50%;
     height: 30%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -55,8 +54,7 @@ body {
 
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    justify-content: center;
-    align-items: center;
+    place-self: stretch stretch;
 
     font-size: 24px;
 }
@@ -75,9 +73,8 @@ body {
 .element:nth-child(3) {
     background-image: linear-gradient(to bottom, #804cdb44, #dbcf6556);
     grid-area: content;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
+    /* добавил значиение place-self вместо justify-items и тд. Так как grid.  */
+    place-self: stretch center;
     
 }
 
@@ -86,6 +83,7 @@ body {
     width: 95%;
     height: 90%;    
     grid-template-columns: 1fr 1fr 1fr;
+    /* Вот тут же стоит grid-template-rows, или я что-то не верно указал? */
     grid-template-rows: 1fr 1fr 4fr;
     grid-template-areas: 
     "header header header"
