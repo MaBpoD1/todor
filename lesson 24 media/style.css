@@ -57,23 +57,42 @@ a {
     box-shadow: 0px 0px 5px brown;
 }
 
+.navi.content {
+    align-self: center;
+    justify-content: center;
+    
+}
+
 .content {
+    align-items: start;
+    justify-content: center;
     grid-area: content;
     display: flex;
-    
+    width: auto;
+    height: auto;
     padding: 20px;
+    border-radius: 15px;
+    background-color: aliceblue;
+    margin: 15px;
 }
 
-/* настроить так чтобы текст отображался под изображением, в общем 21 урок просмотри как ты делал */
 
-/* .images {
+ .images {
+    width: 350px;
     float: right;
-}
+    border-radius: 15px;
+    margin-bottom: 15px;
+} 
 
-.text {
+.Usyk {
     margin: 15px;
     font-size: 20px;
-} */
+    float: right;
+} 
+
+h1 {
+    text-align: center;
+}
 
 .leftbar {
     grid-area: leftbar;
@@ -100,5 +119,103 @@ a {
 .links:hover {
     transform: scale(1.4);
     box-shadow: 0px 0px 5px brown;
+}
+
+@media (max-width: 1024px){
+    .navi {
+        grid-template-columns: 150px auto 150px;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "leftbar content menu" ;
+        align-self: center;
+        justify-content: center;
+    }
+
+    .Usyk {
+        font-size: 0.75em;
+        float: none;
+    }
+
+    .images {
+        float: none;
+        width: 175px;
+    }
+
+    .content {
+        margin: 0;
+        width: auto;
+        height: auto;
+        align-items: flex-start;
+    }
+
+    .links {
+        margin-top: 15px;
+        padding: 0.25rem;
+        font-size: 16px;
+    }
+
+    .menu {
+    flex-wrap: wrap;
+    align-content: flex-start;
+    }
+
+    .buttons {
+        margin-top: 15px;
+    }
+
+}
+
+@media (max-width: 768px){
+    .navi {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 100px auto;
+        grid-template-areas: 
+        "leftbar"
+        "menu" 
+        "content";
+        align-self: center;
+        justify-content: center;
+    }
+
+    .Usyk {
+        font-size: 0.75em;
+        float: none;
+    }
+
+    .images {
+        float: none;
+        width: 175px;
+    }
+
+    .content {
+        margin: 0;
+        width: auto;
+        height: auto;
+        align-items: flex-start;
+    }
+
+    .links {
+        margin-top: 15px;
+        padding: 0.25rem;
+        font-size: 16px;
+    }
+
+    .links:hover {
+        background-image: linear-gradient(to bottom right, yellow, orange) ;
+    }
+
+    .menu {
+    flex-wrap: wrap;
+    align-content: flex-start;
+    }
+
+    .buttons {
+        margin-top: 15px;
+    }
+
+    .leftbar {
+        flex-wrap: wrap;
+    }
+
 }
 
