@@ -65,7 +65,7 @@ a {
 
 .content {
     align-items: start;
-    justify-content: center;
+    justify-content: flex-start;
     grid-area: content;
     display: flex;
     width: auto;
@@ -76,23 +76,34 @@ a {
     margin: 15px;
 }
 
+.description {
+    width: 380px;
+    margin: 10px;
+    filter: drop-shadow(13px 10px 10px #000000);
+    align-items: center;
+    justify-content: center;
+    float: left;
+}
 
- .images {
-    width: 350px;
-    float: right;
+#images {
+    
     border-radius: 15px;
-    margin-bottom: 15px;
+    
 } 
+
 
 .Usyk {
     margin: 15px;
-    font-size: 20px;
-    float: right;
+    font-size: 15px;
+    justify-content: flex-start;
 } 
 
 h1 {
     text-align: center;
 }
+
+/* сделать так чтобы текст не вылазил description. */
+/* сделать так чтобы лефт и райт бары подкрепились к основному grid при изменении разрешения */
 
 .leftbar {
     grid-area: leftbar;
@@ -132,20 +143,25 @@ h1 {
     }
 
     .Usyk {
-        font-size: 0.75em;
-        float: none;
+        font-size: 20px;
+        float: inline-end;
     }
 
-    .images {
-        float: none;
+    #images {
+        
         width: 175px;
+        
     }
 
     .content {
+        max-width: 100%;
+        max-height: 100%;
         margin: 0;
         width: auto;
         height: auto;
         align-items: flex-start;
+        
+        
     }
 
     .links {
@@ -155,12 +171,24 @@ h1 {
     }
 
     .menu {
-    flex-wrap: wrap;
-    align-content: flex-start;
+        max-width: 100%;
+        max-height: 100%;
+        flex-wrap: wrap;
+        align-content: flex-start;
     }
 
     .buttons {
         margin-top: 15px;
+    }
+
+    .leftbar {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .container {
+        max-height: 100%;
+        
     }
 
 }
@@ -182,7 +210,7 @@ h1 {
         float: none;
     }
 
-    .images {
+    #images {
         float: none;
         width: 175px;
     }
