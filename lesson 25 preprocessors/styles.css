@@ -1,0 +1,146 @@
+.background {
+  background-image: url(./background.png);
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  filter: blur(1px);
+}
+
+.block {
+  border: 1px solid #0000bf;
+  background-image: linear-gradient(to bottom, #2b2b2b, #1a1f36);
+}
+.block p {
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.main-content {
+  box-shadow: 0px 0px 15px #6fa6ca;
+  background-color: #5b5c6e;
+}
+
+.header {
+  background-image: linear-gradient(to bottom right, #3b3755, #2a5672);
+  box-shadow: 0px 5px 25px #6fa6ca;
+}
+
+.header a {
+  text-decoration: none;
+  color: #6fa6ca;
+}
+
+input {
+  background-color: linear-gradient(to bottom, #2b2b2b, #1a1f36);
+}
+
+.main-content {
+  width: 960px;
+  height: 200vh;
+}
+
+.block {
+  width: 250px;
+  height: 200px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  scroll-behavior: smooth;
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.header nav ul {
+  display: flex;
+  width: 80vw;
+  gap: 50px;
+  list-style: none;
+  justify-content: center;
+}
+
+.header a {
+  display: inline-block;
+  border: 1px solid #6fa6ca;
+  border-radius: 15px;
+  padding: 10px 20px;
+  transition: 0.2s ease-in-out;
+}
+.header a:hover {
+  transform: scale(1.25);
+  background-color: #cce0ec;
+  box-shadow: 0px 0px 5px #cce0ec;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .background {
+  position: sticky;
+  top: 10px;
+  width: 100%;
+  height: 100%;
+}
+.container .main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  justify-items: center;
+  padding: 25px;
+}
+.container .main-content .block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100px;
+  padding: 25px;
+  margin-top: 15px;
+  width: 90%;
+}
+.container .main-content .block .content {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.container .main-content .block .content textarea.input-text {
+  display: flex;
+  border-radius: 15px;
+  padding: 15px;
+  width: 100%;
+  height: 150px;
+  box-sizing: border-box;
+  line-height: normal;
+  resize: none;
+}
+.container .main-content .block .content .submitbtn {
+  display: flex;
+  margin-top: 10px;
+  border-radius: 10px;
+  float: right;
+  border: 1px solid #6fa6ca;
+  border-radius: 15px;
+  padding: 10px 20px;
+  transition: 0.2s ease-in-out;
+}
+.container .main-content .block .content .submitbtn:hover {
+  transform: scale(1.25);
+  background-color: #cce0ec;
+  box-shadow: 0px 0px 5px #cce0ec;
+}/*# sourceMappingURL=styles.css.map */

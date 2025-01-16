@@ -1,0 +1,38 @@
+.background {
+  background-image: url(./background.png);
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  filter: blur(1px);
+}
+
+.block {
+  border: 1px solid #0000bf;
+  background-image: linear-gradient(to bottom, #2b2b2b, #1a1f36);
+}
+.block p {
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.main-content {
+  box-shadow: 0px 0px 15px #6fa6ca;
+  background-color: #5b5c6e;
+}
+
+.header {
+  background-image: linear-gradient(to bottom right, #3b3755, #2a5672);
+  box-shadow: 0px 5px 25px #6fa6ca;
+}
+
+.header a {
+  text-decoration: none;
+  color: #6fa6ca;
+}
+
+input {
+  background-color: linear-gradient(to bottom, #2b2b2b, #1a1f36);
+}/*# sourceMappingURL=colors.css.map */

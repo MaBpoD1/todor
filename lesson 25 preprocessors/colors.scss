@@ -1,0 +1,65 @@
+@use 'sass:color';
+
+$main-color: #282636;
+$top-gradient-color: #3b3755;
+$bottom-gradient-color: #263436;
+$container-color: #5b5c6e;
+$header-btn-color: #6fa6ca;
+$header-btn-hover: lighten($header-btn-color, 25%);
+// $body-color: linear-gradient(to bottom, $bottom-gradient-color, $top-gradient-color);
+$block-backcolor: linear-gradient(to bottom, #2b2b2b, #1a1f36);
+$background-image: url(./background.png);
+
+
+.background {
+    background-image: $background-image;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(1px);
+}
+
+
+
+@mixin header-color {
+    background-image: linear-gradient(to bottom right, $top-gradient-color, color.scale($header-btn-color, $lightness: -50%));
+    box-shadow: 0px 5px 25px $header-btn-color;
+}
+
+
+
+@mixin decor {
+    border: 1px solid color.scale(blue, $lightness: -25%); 
+    // Sass постепенно убирает старые функции, такие как darken(), чтобы дать больше контроля над изменениями цвета. Вместо этого используем color.scale(*цвет*, параметр: n );
+    background-image: $block-backcolor;
+}
+
+.block {
+    @include decor;
+    p {
+        color: white;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);;
+    }
+}
+
+.main-content {
+    box-shadow: 0px 0px 15px $header-btn-color;
+    background-color: $container-color;
+}
+
+.header {
+    @include header-color;
+}
+
+.header a {
+    text-decoration: none;
+    color: $header-btn-color;
+}
+
+input {
+    background-color: $block-backcolor;
+}
+

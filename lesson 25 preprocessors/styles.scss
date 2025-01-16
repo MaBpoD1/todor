@@ -1,0 +1,135 @@
+@use 'colors' as c;
+
+$margin-block: 25px;
+$padding-block: 15px;
+
+
+
+$container-w: 960px;
+$block-w: 250px;
+$block-h: 200px;
+$conteiner-h: 200vh;
+
+$content-width: $container-w - $block-w;
+
+.main-content {
+    width: $container-w;
+    height: $conteiner-h;
+}
+
+.block {
+    width: $block-w;
+    height: $block-h;
+}
+
+
+@mixin position-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    scroll-behavior: smooth;
+    
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    @include position-flex;
+    position: sticky;
+    top: 0;
+    
+}
+
+.header nav ul {
+    display: flex;
+    width: 80vw;
+    gap: 50px;
+    list-style: none;
+    justify-content: center;
+}
+
+@mixin buttons {
+    border: 1px solid c.$header-btn-color;
+    border-radius: 15px;
+    padding: 10px 20px;
+    
+}
+
+.header a {
+    display: inline-block;
+    @include buttons;
+    transition: .2s ease-in-out;
+    &:hover {
+        transform: scale(1.25);
+        background-color: c.$header-btn-hover;
+        box-shadow: 0px 0px 5px c.$header-btn-hover;
+    }
+}
+
+.container {
+    @include position-flex;
+
+    .background {
+        position: sticky;
+        top: 10px;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .main-content  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        justify-items: center;
+        padding: 25px;
+
+        .block {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            min-height: 100px;
+            padding: 25px;
+            margin-top: 15px;
+            width: 90%;
+            .content {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+                display: block;
+                textarea.input-text {
+                    display: flex;
+                    border-radius: 15px;
+                    padding: 15px;
+                    width: 100%;
+                    height: 150px;
+                    box-sizing: border-box;
+                    line-height: normal;
+                    resize: none;
+                }
+                .submitbtn {
+                    display: flex;
+                    margin-top: 10px;
+                    border-radius: 10px;
+                    float: right;
+                    @include buttons;
+                    transition: .2s ease-in-out;
+                    &:hover {
+                        transform: scale(1.25);
+                        background-color: c.$header-btn-hover;
+                        box-shadow: 0px 0px 5px c.$header-btn-hover;
+                    }
+                }
+            }
+        }
+    }
+}
+
